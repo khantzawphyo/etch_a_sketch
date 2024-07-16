@@ -1,0 +1,233 @@
+:root {
+    --font-family: "Poppins", sans-serif;
+    --bg-color: #1e1e2e;
+    --primary-color: #ff6f61;
+    --accent-color: #ffc107;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #f0f0f0;
+    --button-hover: #ff7043;
+    --button-hover-alt: #ffca28;
+    --button-active: #ff7043;
+    --secondary-shadow: rgba(0, 0, 0, 0.2);
+    --scroll-bar-color: #ffc107;
+    --scroll-bar-bg: #1e1e2e;
+}
+
+body.light-mode {
+    --bg-color: #dee4e7;
+    --primary-text-color: #1e1e2e;
+    --secondary-text-color: #1e1e2e;
+    --button-hover: #ff8569;
+    --button-hover-alt: #ffda42;
+    --button-active: #ff8569;
+    --scroll-bar-color: #ffc107;
+    --scroll-bar-bg: #dee4e7;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    /* Footer Support */
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    color: var(--primary-text-color);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    padding: 20px;
+
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* h1 */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+/* title-a */
+.title-a {
+    color: var(--primary-color);
+}
+
+/* main */
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* a */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* side menu */
+#side-menu {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: var(--secondary-shadow);
+}
+
+#side-menu h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* button */
+#side-menu button {
+    display: block;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#side-menu button:hover,
+.color-picker-container:hover {
+    background-color: var(--button-hover-alt);
+    transform: scale(1.05);
+}
+
+/* color picker container */
+.color-picker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-weight: 600;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* color picker */
+#color-picker {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#color-picker::-webkit-color-swatch {
+    border-radius: 50px;
+    border: none;
+}
+
+#color-picker::-moz-color-swatch {
+    border-radius: 50px;
+    border: none;
+}
+
+/* board */
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    border: 2px solid #d1d1d1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.square {
+    width: calc(100% / 16);
+    height: calc(100% / 16);
+    background-color: white;
+    transition: background-color 0.3s;
+    border: .25px solid whitesmoke;
+}
+
+.board:hover {
+    cursor: url('cursor.cur'), auto;
+}
+
+/* scrollbar */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-bg);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 14px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scroll-bar-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-bar-color);
+    border-radius: 7px
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.name:hover {
+    text-decoration: underline var(--primary-text-color) 1px;
+}
+
+.fa-github {
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.5);
+}
