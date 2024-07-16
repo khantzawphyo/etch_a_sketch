@@ -13,7 +13,7 @@
     --scroll-bar-bg: #1e1e2e;
 }
 
-body.light-mode {
+/* body.light-mode {
     --bg-color: #dee4e7;
     --primary-text-color: #1e1e2e;
     --secondary-text-color: #1e1e2e;
@@ -22,7 +22,7 @@ body.light-mode {
     --button-active: #ff8569;
     --scroll-bar-color: #ffc107;
     --scroll-bar-bg: #dee4e7;
-}
+} */
 
 *,
 *::before,
