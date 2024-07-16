@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Etch-a-Sketch</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Etch-a-Sketch</title>
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="./resources/etch-a-sketch.png" type="image/x-icon">
+	<!-- CSS -->
+	<link rel="stylesheet" href="./css/style.css">
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/5786aab587.js" crossorigin="anonymous"></script>
+	<!-- JS -->
+	<script src="./js/script.js" defer></script>
 </head>
+
 <body>
-  
+	<header>
+        <h1>Etch-<span class="title-a">a</span>-Sketch</h1>
+    </header>
+
+	<main>  
+        <div id="side-menu">
+            <h2>Options</h2>
+            <button id="grid-size">Change Grid Size</button>
+            <button id="classic-mode">Classic Mode</button>
+            <div class="color-picker-container">
+                <label for="color-picker">Color Picker</label>
+                <input type="color" value="#1e1e1e" id="color-picker">
+            </div>
+            <button id="rainbow-mode">Rainbow Mode</button>            
+            <button id="eraser">Eraser</button>
+            <button id="reset">Reset</button>
+        </div>
+
+        <div id="game">
+            <div class="board"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;
+            <script>document.write(new Date().getFullYear());</script> 
+            <a href="https://github.com/khantzawphyo" aria-label="GitHub profile">
+                <span class="name">Khant Zaw Phyo</span>
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </p>
+    </footer>
 </body>
+
 </html>
