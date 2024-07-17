@@ -184,7 +184,7 @@ main {
 }
 
 .board:hover {
-    cursor: url('./assets/cursor.cur'), auto;
+    cursor: url('../assets/cursor.cur'), auto;
 }
 
 /* scrollbar */
