@@ -81,12 +81,6 @@ main {
     gap: 20px;
 }
 
-/* a */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 /* side menu */
 #side-menu {
     background-color: var(--primary-color);
@@ -217,17 +211,15 @@ a {
 footer {
     margin-top: 20px;
     text-align: center;
-    font-size: 1rem;
+    font-size: .75rem;
 }
 
-.name:hover {
-    text-decoration: underline var(--primary-text-color) 1px;
+footer a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--accent-color);
 }
 
-.fa-github {
-    transition: transform 0.3s ease-in-out;
-}
-
-.fa-github:hover {
-    transform: rotate(360deg) scale(1.5);
+footer a:hover {
+    text-decoration: underline var(--accent-color) 1px;
 }
